@@ -6,6 +6,7 @@ import Sidebar from "../components/Sidebar";
 export default function Home() {
   return (
     <div className="bg-black h-screen overflow-hidden">
+      {console.log(process.env.LOGIN_URL)}
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />

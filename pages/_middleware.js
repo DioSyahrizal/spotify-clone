@@ -15,7 +15,7 @@ export async function middleware(req) {
   // Redirect them to login if doesn't have token
   if (!token && pathname !== "/login") {
     return NextResponse.redirect(
-      process.env.LOGIN_URL
+      process.env.NODE_ENV === "production"
         ? process.env.LOGIN_URL
         : "http://localhost:3000/login"
     );
