@@ -16,7 +16,7 @@ export async function middleware(req) {
   if (!token && pathname !== "/login") {
     return NextResponse.redirect(
       process.env.NODE_ENV === "production"
-        ? process.env.LOGIN_URL
+        ? process.env.NEXT_PUBLIC_LOGIN_URL
         : "http://localhost:3000/login"
     );
   }
